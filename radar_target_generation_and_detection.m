@@ -160,7 +160,7 @@ n_g_bands = 4;
 
 % *%TODO* :
 % offset the threshold by SNR value in dB
-offset = 1.5;
+offset = 1.3;
 
 % *%TODO* :
 %Create a vector to store noise_level for each iteration on training cells
@@ -219,13 +219,10 @@ RDM(RDM~=0 & RDM~=1) = 0;
 % *%TODO* :
 %display the CFAR output using the Surf function like we did for Range
 %Doppler Response output.
-figure('Name', 'CA-CFAR RDM')
+figure('Name', 'CA-CFAR')
 surf(doppler_axis, range_axis, RDM);
-%colorbar;
-title('CA-CFAR RDM');
-xlabel('Speed');
+title('CA-CFAR');
+xlabel('Velocity');
 ylabel('Range');
-zlabel('Normalized Amplitude');
-view(350, 50);
-
-
+zlabel('Amplitude');
+colorbar;

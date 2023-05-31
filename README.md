@@ -11,7 +11,7 @@ The provided code implements a 2D Constant False Alarm Rate (CFAR) technique, wh
 **Selection of Training, Guard cells and offset:**
 * The training cells n_t_cells and n_t_bands are chosen in both dimensions, here as 8 cells in range and doppler dimensions respectively.
 * The guard cells n_g_cells and n_g_bands are also chosen in both dimensions, which in this case is 4 cells in range and doppler dimensions respectively. Guard cells are the cells around the CUT that are not used in noise estimation to avoid the risk of including target cells into the noise estimate.
-* The offset is set to 1.5 dB. This is the value added to the averaged noise level to calculate the threshold.
+* The offset is set to 1.3 dB. This is the value added to the averaged noise level to calculate the threshold.
 
 **Steps taken to suppress the non-thresholded cells at the edges:**
 * When sliding the window across the range-Doppler map, the loop's start and end points are adjusted to avoid the edges. The window is only moved across cells where the entire window (including training and guard cells) fit within the range-Doppler map.
